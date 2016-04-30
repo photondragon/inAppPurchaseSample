@@ -13,6 +13,8 @@
 		94024C261CD519B800ECCAB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94024C241CD519B800ECCAB4 /* Main.storyboard */; };
 		94024C281CD519B800ECCAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94024C271CD519B800ECCAB4 /* Assets.xcassets */; };
 		94024C2B1CD519B800ECCAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94024C291CD519B800ECCAB4 /* LaunchScreen.storyboard */; };
+		94024C331CD519FA00ECCAB4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94024C321CD519FA00ECCAB4 /* StoreKit.framework */; };
+		94024C391CD535C200ECCAB4 /* IDNIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94024C381CD535C200ECCAB4 /* IDNIAPHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		94024C271CD519B800ECCAB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94024C2A1CD519B800ECCAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94024C2C1CD519B800ECCAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94024C321CD519FA00ECCAB4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		94024C371CD535C200ECCAB4 /* IDNIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNIAPHelper.h; sourceTree = "<group>"; };
+		94024C381CD535C200ECCAB4 /* IDNIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNIAPHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94024C331CD519FA00ECCAB4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 		94024C0F1CD519B800ECCAB4 = {
 			isa = PBXGroup;
 			children = (
+				94024C321CD519FA00ECCAB4 /* StoreKit.framework */,
 				94024C1A1CD519B800ECCAB4 /* inAppPurchaseSample */,
 				94024C191CD519B800ECCAB4 /* Products */,
 			);
@@ -62,6 +69,8 @@
 				94024C1F1CD519B800ECCAB4 /* AppDelegate.m */,
 				94024C211CD519B800ECCAB4 /* ViewController.h */,
 				94024C221CD519B800ECCAB4 /* ViewController.m */,
+				94024C371CD535C200ECCAB4 /* IDNIAPHelper.h */,
+				94024C381CD535C200ECCAB4 /* IDNIAPHelper.m */,
 				94024C241CD519B800ECCAB4 /* Main.storyboard */,
 				94024C271CD519B800ECCAB4 /* Assets.xcassets */,
 				94024C291CD519B800ECCAB4 /* LaunchScreen.storyboard */,
@@ -110,6 +119,12 @@
 				TargetAttributes = {
 					94024C171CD519B800ECCAB4 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = L52WR6EY5Z;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,6 +166,7 @@
 			files = (
 				94024C231CD519B800ECCAB4 /* ViewController.m in Sources */,
 				94024C201CD519B800ECCAB4 /* AppDelegate.m in Sources */,
+				94024C391CD535C200ECCAB4 /* IDNIAPHelper.m in Sources */,
 				94024C1D1CD519B800ECCAB4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +279,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = inAppPurchaseSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.mahu.inAppPurchaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,7 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = inAppPurchaseSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.mahu.inAppPurchaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
