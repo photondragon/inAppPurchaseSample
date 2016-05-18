@@ -17,6 +17,16 @@
 + (BOOL)isSupportIAP;
 
 /**
+ *  由于某些原因，导致有些收据没有成功上传到服务器
+ *  uploader方法会在适当的时机被调用，当返回TRUE时，表示上传成功
+ *  如果上传失败，uploader 还会被重复调用（调用时机是不确定的）。
+ *
+ *  @return <#return value description#>
+ */
+// uploader
++ (void)setReceiptUploader:(BOOL (^)())uploader;
+
+/**
  *  获取产品信息
  *
  *  @param productId 产品ID（在iTunes Connect网站上设置的）
@@ -33,5 +43,10 @@
  *  @param callback 购买成功与否的回调block；如果出错，错误原因通过参数error返回
  */
 + (void)purchaseProduct:(SKProduct*)product callback:(void (^)(SKPaymentTransaction *transaction, NSError* error))callback;
+
++ (void)puchaseProductWithId:(NSString*)productId callback:(BOOL (^)(NSData*receipt, NSError*error))callback;
+
++ (void)restorePurchased;
++ (void)printReceipt;
 
 @end
