@@ -14,7 +14,7 @@
 		94024C281CD519B800ECCAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94024C271CD519B800ECCAB4 /* Assets.xcassets */; };
 		94024C2B1CD519B800ECCAB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94024C291CD519B800ECCAB4 /* LaunchScreen.storyboard */; };
 		94024C331CD519FA00ECCAB4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94024C321CD519FA00ECCAB4 /* StoreKit.framework */; };
-		94024C391CD535C200ECCAB4 /* IDNIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94024C381CD535C200ECCAB4 /* IDNIAPHelper.m */; };
+		94024C391CD535C200ECCAB4 /* IDNIaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94024C381CD535C200ECCAB4 /* IDNIaper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,8 @@
 		94024C2A1CD519B800ECCAB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94024C2C1CD519B800ECCAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94024C321CD519FA00ECCAB4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		94024C371CD535C200ECCAB4 /* IDNIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNIAPHelper.h; sourceTree = "<group>"; };
-		94024C381CD535C200ECCAB4 /* IDNIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNIAPHelper.m; sourceTree = "<group>"; };
+		94024C371CD535C200ECCAB4 /* IDNIaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDNIaper.h; sourceTree = "<group>"; };
+		94024C381CD535C200ECCAB4 /* IDNIaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDNIaper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 				94024C1F1CD519B800ECCAB4 /* AppDelegate.m */,
 				94024C211CD519B800ECCAB4 /* ViewController.h */,
 				94024C221CD519B800ECCAB4 /* ViewController.m */,
-				94024C371CD535C200ECCAB4 /* IDNIAPHelper.h */,
-				94024C381CD535C200ECCAB4 /* IDNIAPHelper.m */,
+				94024C371CD535C200ECCAB4 /* IDNIaper.h */,
+				94024C381CD535C200ECCAB4 /* IDNIaper.m */,
 				94024C241CD519B800ECCAB4 /* Main.storyboard */,
 				94024C271CD519B800ECCAB4 /* Assets.xcassets */,
 				94024C291CD519B800ECCAB4 /* LaunchScreen.storyboard */,
@@ -166,7 +166,7 @@
 			files = (
 				94024C231CD519B800ECCAB4 /* ViewController.m in Sources */,
 				94024C201CD519B800ECCAB4 /* AppDelegate.m in Sources */,
-				94024C391CD535C200ECCAB4 /* IDNIAPHelper.m in Sources */,
+				94024C391CD535C200ECCAB4 /* IDNIaper.m in Sources */,
 				94024C1D1CD519B800ECCAB4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +320,7 @@
 				94024C311CD519B800ECCAB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

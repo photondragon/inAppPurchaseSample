@@ -18,18 +18,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shx-5y-z7h">
-                                <rect key="frame" x="58" y="70" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="41" y="70" width="67" height="30"/>
+                                <state key="normal" title="1个月会员"/>
                                 <connections>
-                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcg-vc-5K8"/>
+                                    <action selector="onVip1Month:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EET-0h-8LV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOh-J6-mIf">
+                                <rect key="frame" x="174" y="70" width="70" height="30"/>
+                                <state key="normal" title="3个月会员"/>
+                                <connections>
+                                    <action selector="onVip3Month:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYx-AK-1i8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sN-0w-bDo">
+                                <rect key="frame" x="30" y="132" width="90" height="30"/>
+                                <state key="normal" title="表情【默默】"/>
+                                <connections>
+                                    <action selector="onMotionMuoMuo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3i-JI-YuU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lms-hy-zzU">
+                                <rect key="frame" x="165" y="132" width="90" height="30"/>
+                                <state key="normal" title="表情【乐乐】"/>
+                                <connections>
+                                    <action selector="onMotionLeLe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wnA-7m-FgT"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vF-dH-KFV">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VW9-8G-PSf">
+                                        <rect key="frame" x="282" y="271" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VW9-8G-PSf" firstAttribute="centerX" secondItem="8vF-dH-KFV" secondAttribute="centerX" id="Npa-Vd-HeM"/>
+                                    <constraint firstItem="VW9-8G-PSf" firstAttribute="centerY" secondItem="8vF-dH-KFV" secondAttribute="centerY" id="fU0-Sj-ARe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8vF-dH-KFV" secondAttribute="trailing" id="3IB-AQ-vXk"/>
+                            <constraint firstItem="8vF-dH-KFV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5E7-J2-nBE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8vF-dH-KFV" secondAttribute="bottom" id="BAg-MF-fGF"/>
+                            <constraint firstItem="8vF-dH-KFV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cjc-4v-itb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indicator" destination="VW9-8G-PSf" id="O3g-CH-uVn"/>
+                        <outlet property="loadingView" destination="8vF-dH-KFV" id="3yT-8i-1VM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="484" y="194"/>
         </scene>
     </scenes>
 </document>

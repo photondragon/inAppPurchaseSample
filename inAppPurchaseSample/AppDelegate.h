@@ -3,7 +3,7 @@
 //  inAppPurchaseSample
 //
 //  Created by photondragon on 16/5/1.
-//  Copyright © 2016年 mahu. All rights reserved.
+//  Copyright © 2016年 iosdev.net. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
